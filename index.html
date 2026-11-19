@@ -23,10 +23,16 @@
 @media(max-width:650px){.topic-cards{grid-template-columns:1fr;gap:18px}.topic-card{min-height:0;padding:25px}.topic-card h3{font-size:28px}.index-heading{display:block}.index-heading>p{margin-top:16px;max-width:none}.research-index{padding:36px 0}.card-overview{grid-template-columns:1fr 110px;gap:14px}.card-overview img{width:110px}.atlas-card h3{font-size:25px}.detail-toolbar>span{display:none}}
 @media(max-width:360px){.card-overview{grid-template-columns:1fr}.card-overview img{width:160px}}
 @media(prefers-reduced-motion:reduce){.topic-card{transition:none}.topic-card:hover{transform:none}}@media print{.research-index,.detail-toolbar:not([hidden]){display:none}.topic[hidden]{display:block!important}}
+
+/* Homepage acknowledgement and logo sizing. */
+.initiative-index .lab-logo-link{flex-basis:360px}.initiative-index .lab-logo{width:360px}
+.acknowledgements{padding-top:42px;padding-bottom:52px;border-top:1px solid #d0d0d0}.acknowledgements h2{font-size:32px;margin:0 0 18px}.acknowledgements>.eyebrow{color:#8c1d40;margin-bottom:12px}.acknowledgements>p{font-size:16px;max-width:900px;color:#555}.supporter-logos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:30px;margin:30px 0 34px;background:#fff;padding:30px 22px;border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0}.supporter{display:flex;flex-direction:column;align-items:center;text-align:center;text-decoration:none;color:#191919;font-size:13px;line-height:1.45;gap:16px}.supporter:hover{color:#8c1d40;text-decoration:underline}.supporter-art{height:116px;width:100%;display:flex;align-items:center;justify-content:center}.supporter-art img{display:block;max-height:105px;max-width:100%;width:auto;height:auto}.supporter--scripps img{width:240px}.supporter--icfj img{max-height:105px}.supporter--asu img{max-height:96px}.acknowledgements .special-thanks{color:#191919;font-size:16px;line-height:1.8;max-width:1000px;border-left:5px solid #ffc627;padding-left:22px;margin-top:0}
+@media(max-width:700px){.supporter-logos{grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px}.acknowledgements h2{font-size:28px}}
+@media(max-width:600px){.initiative-index .lab-logo-link{flex-basis:280px}.initiative-index .lab-logo{width:280px}.initiative-index .lab-masthead .lab-home-link{display:none}.acknowledgements{padding-top:30px;padding-bottom:36px}.supporter-logos{padding:24px 12px;gap:26px 18px}.supporter-art{height:100px}.supporter-art img{max-height:92px}.supporter--asu img{max-height:88px}.supporter{font-size:12px}.acknowledgements .special-thanks{padding-left:16px;font-size:15px}}
 </style>
 <link rel="stylesheet" href="asu-brand.css">
 </head>
-<body>
+<body class="initiative-index">
   <header class="top">
     <div class="lab-masthead"><div class="lab-masthead-inner"><a class="lab-logo-link" href="https://cronkite.asu.edu/about/centers-and-institutes/midas-lab" aria-label="About MIDaS Lab at ASU Cronkite"><img class="lab-logo" src="midas-lab-logo.png" alt="Arizona State University, Walter Cronkite School of Journalism and Mass Communication; MIDaS Lab — Media, Information, Data and Society Lab" width="1013" height="563"></a><span class="lab-home-link">Research &amp; publications</span></div></div>
     <div class="shell hero">
@@ -69,6 +75,18 @@
       <div class="publications"><article class="publication"><div class="meta">Conference article · 2025 · AIES</div><h3>Disaggregated Health Data in LLMs: Evaluating Data Equity in the Context of Asian American Representation</h3><p>The researchers evaluated GPT-3.5 responses for 21 Asian American subgroups, comparing the diversity and accuracy of the health information it produced. The study finds uneven representation and gaps in subgroup-specific health concerns, pointing to the need for more precise prompts and better integration of authoritative health data. The findings concern the model and data collection period studied, rather than all AI systems.</p><div class="links"><a href="25.%20Data%20disaggregation%20in%20LLM.pdf">Read the article (PDF)</a><a href="https://ojs.aaai.org/index.php/AIES/article/view/36549">Conference publication</a></div><div class="citation"><div class="citation-label">APA reference</div><p class="reference">Balasuriya Mudiyanselage, U., Jayprakash, B., Lee, K., &amp; Kwon, K. H. (2025). Disaggregated health data in LLMs: Evaluating data equity in the context of Asian American representation. <em>Proceedings of the AAAI/ACM Conference on AI, Ethics, and Society, 8</em>(1), 292–303. <a href="https://doi.org/10.1609/aies.v8i1.36549">https://doi.org/10.1609/aies.v8i1.36549</a></p></div></article></div>
     </section>
   </main>
+  <section class="acknowledgements shell" id="acknowledgements" aria-labelledby="acknowledgements-title">
+    <p class="eyebrow">Support for this initiative</p>
+    <h2 id="acknowledgements-title">Funding and acknowledgements</h2>
+    <p>The projects in this initiative received support from the National Science Foundation, Scripps Howard Foundation, International Center for Journalists, and ASU Institute for Social Science Research.</p>
+    <div class="supporter-logos" aria-label="Supporting organizations">
+      <a class="supporter supporter--nsf" href="https://www.nsf.gov/"><span class="supporter-art"><img src="national-science-foundation.png" alt="National Science Foundation logo" width="320" height="320" loading="lazy"></span><span>National Science Foundation</span></a>
+      <a class="supporter supporter--scripps" href="https://scripps.com/fund/"><span class="supporter-art"><img src="scripps-howard-foundation.png" alt="Scripps Howard Foundation logo" loading="lazy"></span><span>Scripps Howard Foundation</span></a>
+      <a class="supporter supporter--icfj" href="https://www.icfj.org/"><span class="supporter-art"><img src="international-center-for-journalists.svg" alt="International Center for Journalists logo" loading="lazy"></span><span>International Center for Journalists</span></a>
+      <a class="supporter supporter--asu" href="https://issr.asu.edu/"><span class="supporter-art"><img src="arizona-state-university.png" alt="Arizona State University logo" width="303" height="234" loading="lazy"></span><span>ASU Institute for<br>Social Science Research</span></a>
+    </div>
+    <p class="special-thanks">Special thanks to Dr. Young Eun Moon, Dr. Zhan Xu, Dr. Kristina Vera-Phillips, Dr. Kookjin Lee, Dr. Kristy Roschke, Bálint Szolga, and Cody Hays for their contributions to this project.</p>
+  </section>
   <footer class="footer"><div class="shell"><p><strong>Ethnic Community Media and Audience Trust in America</strong><br>MIDAS Lab · Walter Cronkite School of Journalism and Mass Communication<br>Arizona State University</p><p><a href="https://cronkite.asu.edu/about/centers-and-institutes/midas-lab">About MIDAS Lab ↗</a><br><a href="#">Back to top ↑</a></p></div></footer>
 
 <script>
