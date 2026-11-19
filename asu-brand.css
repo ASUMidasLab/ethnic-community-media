@@ -1,0 +1,101 @@
+/* ASU styling derived from the supplied Cronkite flyer and 2023 presentation
+   templates, with web typography and colors checked against brandguide.asu.edu.
+   Data visualization category colors remain distinct from interface colors. */
+:root {
+  --asu-maroon: #8c1d40;
+  --asu-gold: #ffc627;
+  --asu-black: #191919;
+  --asu-gray: #747474;
+  --ink: #191919;
+  --muted: #555;
+  --paper: #fafafa;
+  --line: #d0d0d0;
+  --accent: #8c1d40;
+  --mint: #f2f2f2;
+}
+body { background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+h1, h2, h3, .hero h1, .hero-stat b, .group-total strong,
+.number, .section-num, .citation {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, .hero h1 { font-weight: 700; color: inherit; }
+h1, .hero h1 { letter-spacing: -.035em; line-height: 1.08; }
+h2 { letter-spacing: -.025em; }
+a, .lab-home-link { color: var(--asu-maroon); }
+a:hover { color: #64152e; }
+a:focus-visible, button:focus-visible, input:focus-visible,
+select:focus-visible, summary:focus-visible {
+  outline: 3px solid var(--asu-maroon); outline-offset: 4px;
+}
+.lab-masthead { color: var(--asu-black); background: #fff; border-bottom: 1px solid #d0d0d0; }
+.lab-masthead-inner { padding-top: 12px; padding-bottom: 12px; }
+.lab-logo { height: auto; }
+.lab-home-link { font-weight: 700; }
+header, .top { color: #fff; background: var(--asu-black); }
+.hero { position: relative; }
+.hero h1 { max-width: 1040px; }
+.hero .eyebrow { color: var(--asu-gold); letter-spacing: .12em; }
+.hero .eyebrow::before { content: ''; display: block; width: 64px; height: 7px; background: var(--asu-gold); margin-bottom: 20px; }
+.hero p, .hero .intro, .hero-stat span { color: #f2f2f2; }
+.hero-bottom { color: #fff; }
+.hero-bottom span, .hero-stat { border-color: #747474; }
+.hero-stat b { font-weight: 700; color: var(--asu-gold); }
+nav[aria-label="Page sections"] { background: var(--asu-black); }
+nav[aria-label="Page sections"] a { color: #fff; border-bottom: 3px solid transparent; padding: 6px 0; }
+nav[aria-label="Page sections"] a:hover { color: var(--asu-gold); border-bottom-color: var(--asu-gold); }
+header a:focus-visible, .top a:focus-visible { outline-color: var(--asu-gold); }
+header .lab-masthead a:focus-visible { outline-color: var(--asu-maroon); }
+.section-num, .number, .meta, .index-heading .eyebrow { color: var(--asu-maroon); }
+.section-num, .number { font-weight: 700; }
+.section-heading .eyebrow, .card-meta { color: #555; }
+.lead, .intro, .atlas-copy p, .topic-card > p { color: #555; }
+.topic-card, .topic-card:nth-child(n) {
+  color: var(--asu-black); background: #fff; border: 1px solid #d0d0d0;
+  border-top: 7px solid var(--asu-gold); border-radius: 0;
+}
+.topic-card:hover { color: var(--asu-black); border-color: #747474; border-top-color: var(--asu-maroon); box-shadow: 0 5px 14px #00000014; }
+.topic-card[aria-expanded="true"] { background: #fff; border-color: var(--asu-maroon); box-shadow: 0 0 0 2px var(--asu-maroon); }
+.topic-card h3 { font-weight: 700; font-size: 28px; line-height: 1.15; }
+.card-action { color: var(--asu-maroon); border-top-color: #d0d0d0; font-weight: 700; }
+.card-overview img, .map-frame, .publication { border-radius: 0; border-color: #d0d0d0; }
+.publication { border-left: 5px solid var(--asu-gold); }
+.publication .reference { color: #484848; }
+.publication .citation { border-left: 0; }
+.citation { border-left-color: var(--asu-gold); }
+.button, .download-button, .detail-toolbar button {
+  color: #fff; background: var(--asu-maroon); border: 1px solid var(--asu-maroon);
+  border-radius: 999px; padding: 12px 24px; font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700; line-height: 1.4; text-decoration: none;
+}
+.button:hover, .download-button:hover, .detail-toolbar button:hover { color: #fff; background: #64152e; border-color: #64152e; }
+button, input, select { font-family: Arial, Helvetica, sans-serif; }
+button { border-color: #747474; border-radius: 4px; }
+button:hover { background: #f2f2f2; }
+.tools > button, .pager button { border-radius: 999px; }
+.field select, .field input { border-color: #747474; border-radius: 0; }
+.note { background: #f2f2f2; border-left: 5px solid var(--asu-gold); }
+.benchmark { border-left-color: var(--asu-gold); }
+.bar-track { background: #e8e8e8; }
+.map-wrap { background: #f2f2f2; }
+.state { fill: #fff; stroke: #a8a8a8; }
+.map-label { fill: #555; }
+.inset { stroke: #aaa; }
+.detail { background: #fff; border-color: #d0d0d0; }
+summary::-webkit-details-marker { color: var(--asu-maroon); }
+.directory-collapse > summary { color: var(--asu-black); border-top-color: #747474; }
+footer, .footer { color: #e8e8e8; background: var(--asu-black); border-top: 8px solid var(--asu-gold); }
+footer a, .footer a { color: var(--asu-gold); }
+footer a:hover, .footer a:hover { color: #fff; }
+footer strong, .footer strong { color: #fff; }
+footer a:focus-visible, .footer a:focus-visible { outline-color: var(--asu-gold); }
+@media (max-width: 650px) {
+  .topic-card h3 { font-size: 27px; }
+  .atlas-card h3 { font-size: 25px; }
+  .hero h1 { overflow-wrap: anywhere; }
+}
+@media print {
+  header, .top, footer, .footer { background: #fff; color: #191919; }
+  .hero p, .hero .intro, .hero .eyebrow, .hero-stat span, .hero-stat b,
+  .hero-bottom, footer strong, .footer strong { color: #191919; }
+  footer a, .footer a { color: #8c1d40; }
+}
